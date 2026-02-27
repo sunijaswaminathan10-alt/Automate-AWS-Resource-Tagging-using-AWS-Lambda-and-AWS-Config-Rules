@@ -18,19 +18,19 @@ This ensures proper cost allocation, ownership tracking, and governance complian
 
 # Architecture Services Used
 
--- Amazon EC2
+- Amazon EC2
 
--- AWS Config
+- AWS Config
 
--- Amazon EventBridge
+- Amazon EventBridge
 
--- AWS Lambda
+- AWS Lambda
 
--- Amazon SNS
+- Amazon SNS
 
--- Amazon CloudWatch
+- Amazon CloudWatch
 
--- IAM (Roles & Permissions)
+- IAM (Roles & Permissions)
 
 # Architecture Flow Diagram
 
