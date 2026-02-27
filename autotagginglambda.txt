@@ -1,0 +1,30 @@
+import boto3
+import json
+
+print("VERSION 2 CODE RUNNING")
+
+ec2 = boto3.client('ec2')
+
+def lambda_handler(event, context):
+
+    print("Received Event:")
+    print(json.dumps(event, indent=2))
+
+    resource_id = event['detail']['resourceId']
+    resource_type = event['detail']['resourceType']
+    compliance_type = event['detail']['newEvaluationResult']['complianceType']
+
+    if compliance_type == "NON_COMPLIANT" and resource_type == "AWS::EC2::Instance":
+
+        ec2.create_tags(
+            Resources=[resource_id],
+            Tags=[
+                {'Key': 'Environment', 'Value': 'Production'},
+                {'Key': 'Owner', 'Value': 'DevOps'},
+                {'Key': 'CostCenter', 'Value': '1234'}
+            ]
+        )
+
+        print(f"Successfully tagged EC2 instance {resource_id}")
+
+    return "Tagging Completed"
