@@ -36,24 +36,24 @@ This ensures proper cost allocation, ownership tracking, and governance complian
 
 EC2 Instance (No Tags)
         │
-        ▼
+        v
 AWS Config Rule (Required Tags)
         │
-        ▼
+        v
 Marked as NON_COMPLIANT
         │
-        ▼
+        v
 Amazon EventBridge Rule
         │
         ├───────────────┐
-        ▼               ▼
+        v               v
 AWS Lambda          Amazon SNS
 (Add Required Tags)  (Send Email Alert)
         │
-        ▼
+        v
 AWS Config Re-evaluation
         │
-        ▼
+        v
 Marked as COMPLIANT
 
 # Required Tags Enforced
