@@ -59,7 +59,7 @@ Marked as COMPLIANT
 
 # Required Tags Enforced
 
-## Tag Key	                 ## Purpose
+## Tag Key	                 Purpose
 - Environment	              - Identifies Dev/Test/Production
 - Owner	                    - Identifies the responsible team/person
 - CostCenter	             -  Tracks billing allocation
