@@ -35,24 +35,27 @@ This ensures proper cost allocation, ownership tracking, and governance complian
 # Architecture Flow Diagram
 
 EC2 Instance (No Tags)
-|
-v
+        │
+        ▼
 AWS Config Rule (Required Tags)
-|
-v
+        │
+        ▼
 Marked as NON_COMPLIANT
-|
-| |
+        │
+        ▼
 Amazon EventBridge Rule
-| ----------------------- |
-v                         v
+        │
+        ├───────────────┐
+        ▼               ▼
 AWS Lambda          Amazon SNS
-(Add Required Tags)  (Send Email Alert)| |
-v v
+(Add Required Tags)  (Send Email Alert)
+        │
+        ▼
 AWS Config Re-evaluation
-|
-v
-Marked as COMPLIANT|
+        │
+        ▼
+Marked as COMPLIANT
+
 
 # Required Tags Enforced
 
