@@ -35,33 +35,31 @@ This ensures proper cost allocation, ownership tracking, and governance complian
 # Architecture Flow Diagram
 
 EC2 Instance (No Tags)
-        │
-        v
+|
+v
 AWS Config Rule (Required Tags)
-        │
-        v
+|
+v
 Marked as NON_COMPLIANT
-        │
-        v
+|
+| |
 Amazon EventBridge Rule
-        │
-        ├───────────────┐
-        v               v
+| ----------------------- |
+v                         v
 AWS Lambda          Amazon SNS
-(Add Required Tags)  (Send Email Alert)
-        │
-        v
+(Add Required Tags)  (Send Email Alert)| |
+v v
 AWS Config Re-evaluation
-        │
-        v
-Marked as COMPLIANT
+|
+v
+Marked as COMPLIANT|
 
 # Required Tags Enforced
 
-# Tag Key	                 Purpose
-Environment	              Identifies Dev/Test/Production
-Owner	                    Identifies the responsible team/person
-CostCenter	              Tracks billing allocation
+## Tag Key	                 ## Purpose
+- Environment	              - Identifies Dev/Test/Production
+- Owner	                    - Identifies the responsible team/person
+- CostCenter	             -  Tracks billing allocation
 
 # Example Tags Applied:
   Environment = Production
