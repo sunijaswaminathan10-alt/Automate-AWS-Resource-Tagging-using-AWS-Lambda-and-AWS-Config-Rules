@@ -137,22 +137,32 @@ This solution ensures:
 --> Automated governance enforcement
 --> Cost tracking compliance
 --> Real-time alerting
---> Reduced manual intervention
+--> Reduced manual intervention)
 
 # Screenshots Included
 
 ## AWS Config rule configuration
+![AWS Config Rule](screenshots/Rules _ AWS Config _ ap-south-1.html)
 
 ## EventBridge rule configuration
+![EventBridge rule](screenshots/Eventbridge rule config 1.png)
+![EventBridge rule](screenshots/Eventbridge rule config 2.png)
 
 ## Lambda function setup
+![Lambda function](screenshots/lambda function.png)
 
 ## SNS topic & subscription
+![SNS topic](screenshots/sns topic.png)
+![SNS topic](screenshots/sns subscription.png)
 
 ## EC2 before tagging
+![EC2 before tag](screenshots/ec2 before taging.png)
 
 ## EC2 after auto-tagging
+![EC2 after tag](screenshots/ec2 after taging.png)
 
 ## CloudWatch logs
+![Cloudwatch logs](screenshots/cloudwatch logs.png)
 
 ## Email notification sample
+![Email Notification](screenshots/email notification sample.png)
